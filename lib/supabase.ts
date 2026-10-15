@@ -1,0 +1,2 @@
+import {createBrowserClient} from "@supabase/ssr";
+export function db(){const u=process.env.NEXT_PUBLIC_SUPABASE_URL,k=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;if(!u||!k)throw new Error("Add Supabase environment variables in Vercel.");return createBrowserClient(u,k)}
